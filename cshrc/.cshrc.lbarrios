@@ -1,0 +1,19 @@
+################################
+# Colorize grep
+alias grep grep --color=always
+################################
+# Colorize tmux
+alias tmux      tmux -2
+################################
+# Colorize ls
+alias ls        gls -A --color=auto -F
+setenv CLICOLOR
+eval `gdircolors ~/.dircolors`
+################################
+# Home, End, Del, Ins,...  keys
+bindkey "^[[1~" beginning-of-line
+bindkey "^[[4~" end-of-line
+bindkey "^[[2~" quoted-insert
+bindkey "^[[3~" delete-char
+bindkey "^[[5~" up-history
+bindkey "^[[6~" down-history
