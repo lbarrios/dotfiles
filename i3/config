@@ -164,10 +164,16 @@ exec dunst &
 
 bindsym XF86Reload exec "scrot ~/Screenshots/Screenshot_%Y-%m-%d_%H:%M:%S.png"
 bindsym XF86Favorites exec "scrot ~/Screenshots/Screenshot_%Y-%m-%d_%H:%M:%S.png -u"
-bindsym Print exec "scrot ~/Screenshots/Screenshot_%Y-%m-%d_%H:%M:%S.png"
-bindsym Shift+Print exec "scrot ~/Screenshots/Screenshot_%Y-%m-%d_%H:%M:%S.png -s"
-bindsym Alt+Print exec "scrot ~/Screenshots/Screenshot_%Y-%m-%d_%H:%M:%S.png -u"
 
+# Print full screen with PRINTSCREEN
+bindsym Print exec "scrot ~/Screenshots/Screenshot_%Y-%m-%d_%H:%M:%S.png"
+# Print selected rectangle with SHIFT+PRINTSCREEN
+bindsym --release Shift+Print exec "scrot ~/Screenshots/Screenshot_%Y-%m-%d_%H:%M:%S.png -s"
+bindsym --release Shift_L+Print exec "scrot ~/Screenshots/Screenshot_%Y-%m-%d_%H:%M:%S.png -s"
+bindsym --release Shift_R+Print exec "scrot ~/Screenshots/Screenshot_%Y-%m-%d_%H:%M:%S.png -s"
+# Print current windows with ALT+PRINTSCREEN
+bindsym --release Alt+Print exec "scrot ~/Screenshots/Screenshot_%Y-%m-%d_%H:%M:%S.png -u"
+bindsym --release ISO_Level3_Shift+Print exec "scrot ~/Screenshots/Screenshot_%Y-%m-%d_%H:%M:%S.png -u"
 
 # Workspaces - no anda :(
 exec --no-startup-id "icedove"
