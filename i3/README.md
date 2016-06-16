@@ -5,6 +5,7 @@ Está todo re cabeza por ahora. Parece que hay que dedicarle tiempo a esto..
 * __scrot__: Para capturar pantalla
 * __dunst__: Para las notificaciones
 * __xautolock__: Para bloquear la pantalla automáticamente
+* __dotfiles/bin__: Intalar bin, de este propio repositorio
 
 ### Instalación
 ```bash
