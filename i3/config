@@ -159,8 +159,9 @@ bar {
 # lbarrios
 
 bindsym $mod+Delete exec ~/bin/fuzzy_lock.sh
-exec xautolock -time 1 -locker '~/bin/fuzzy_lock.sh' -notify 10 -notifier "notify-send -u critical -t 6000 -- 'LOCKING screen in 10 seconds'" &
-exec dunst &
+exec -no-startup-id xautolock -detectsleep -time 1 -locker '~/bin/fuzzy_lock.sh' -notify 10 \
+	-notifier "~/bin/notify_locking_screen.sh" &
+exec -no-startup-id dunst &
 
 bindsym XF86Reload exec "scrot ~/Screenshots/Screenshot_%Y-%m-%d_%H:%M:%S.png"
 bindsym XF86Favorites exec "scrot ~/Screenshots/Screenshot_%Y-%m-%d_%H:%M:%S.png -u"
