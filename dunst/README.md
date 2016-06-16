@@ -1,3 +1,7 @@
+Dunst es un gestor de notificaciones.
+.
+.
+.
 Está todo re cabeza por ahora. Parece que hay que dedicarle tiempo a esto..
 
 ### Dependencias
