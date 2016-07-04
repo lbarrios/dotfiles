@@ -2,7 +2,7 @@
 I3LOCK_PID_FILE=~/.i3lock.pid
 
 # Don't execute if there is a instance of i3lock running
-i3locked=`pgrep i3lock | wc -l`
+i3locked=`pgrep --terminal pts/1 i3lock | wc -l`
 [ "$i3locked" = "0" ] || exit 1
 
 # Take a screenshot
@@ -19,6 +19,7 @@ mogrify -blur 0x1 -scale 25% -scale 400% -blur 0x1 /tmp/screen_locked.png
 ~/bin/ring_terminal_bell.sh &
 
 # Lock screen displaying this image.
+killall i3lock 2>/dev/null; killall i3lock 2>/dev/null # fucking orphaned processes..
 i3lock -i /tmp/screen_locked.png -u -c 000000 -e
 # Get i3lock pid, and put into /var/run
 i3pid=$!
@@ -40,7 +41,7 @@ done
 # Next lines are so stupid..
 # i3 process is terminated, plz delete pid
 rm ${I3LOCK_PID_FILE}
-# Why sometimes there is orphaned i3lock processes?
+# Why sometimes there are orphaned i3lock processes?
 killall i3lock 2>/dev/null
 killall i3lock 2>/dev/null
 killall i3lock 2>/dev/null

@@ -159,7 +159,7 @@ bar {
 # lbarrios
 
 bindsym $mod+Delete exec ~/bin/fuzzy_lock.sh
-exec -no-startup-id xautolock -detectsleep -time 1 -locker '~/bin/fuzzy_lock.sh' -notify 10 \
+exec xautolock -detectsleep -time 1 -locker '~/bin/fuzzy_lock.sh' -notify 10 \
 	-notifier "~/bin/notify_locking_screen.sh" &
 exec -no-startup-id dunst &
 
@@ -174,7 +174,11 @@ bindsym --release Shift_L+Print exec "scrot ~/Screenshots/Screenshot_%Y-%m-%d_%H
 bindsym --release Shift_R+Print exec "scrot ~/Screenshots/Screenshot_%Y-%m-%d_%H:%M:%S.png -s"
 # Print current windows with ALT+PRINTSCREEN
 bindsym --release Alt+Print exec "scrot ~/Screenshots/Screenshot_%Y-%m-%d_%H:%M:%S.png -u"
+bindsym --release Alt_L+Print exec "scrot ~/Screenshots/Screenshot_%Y-%m-%d_%H:%M:%S.png -u"
 bindsym --release ISO_Level3_Shift+Print exec "scrot ~/Screenshots/Screenshot_%Y-%m-%d_%H:%M:%S.png -u"
+bindsym --release Control+Printt exec "scrot ~/Screenshots/Screenshot_%Y-%m-%d_%H:%M:%S.png -u"
+bindsym --release Control_L+Printt exec "scrot ~/Screenshots/Screenshot_%Y-%m-%d_%H:%M:%S.png -u"
+bindsym --release Control_R+Print exec "scrot ~/Screenshots/Screenshot_%Y-%m-%d_%H:%M:%S.png -u"
 
 # Workspaces - no anda :(
 exec --no-startup-id "icedove"
