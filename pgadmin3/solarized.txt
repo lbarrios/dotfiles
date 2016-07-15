@@ -1,0 +1,16 @@
+[ctlSQLBox]
+MarginBackgroundColour=rgb(221, 221, 221)
+ColourCaret=rgb(229, 192, 123)
+Colour1=rgb(152, 195, 121)
+Colour2=rgb(152, 195, 121)
+Colour3=rgb(92, 99, 112)
+Colour4=rgb(229, 192, 123)
+Colour5=rgb(86, 182, 194)
+Colour6=rgb(97, 175, 239)
+Colour7=rgb(224, 108, 117)
+Colour10=rgb(171, 178, 191)
+Colour11=rgb(198, 120, 221)
+UseSystemBackground=false
+UseSystemForeground=false
+ColourBackground=rgb(40, 44, 52)
+ColourForeground=rgb(171, 178, 191)
