@@ -2,7 +2,8 @@
 I3LOCK_PID_FILE=~/.i3lock.pid
 
 # Don't execute if there is a instance of i3lock running
-i3locked=`pgrep --terminal pts/1 i3lock | wc -l`
+#i3locked=`pgrep --terminal pts/1 i3lock | wc -l`
+i3locked=`pgrep i3lock | wc -l`
 [ "$i3locked" = "0" ] || exit 1
 
 # Take a screenshot
