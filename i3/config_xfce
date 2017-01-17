@@ -187,5 +187,15 @@ bindsym --release Control_R+Print exec "scrot ~/Screenshots/Screenshot_%Y-%m-%d_
 #exec --no-startup-id "chromium --app=https://i3wm.org/docs/userguide.html"
 
 
+bindsym $mod+Shift+F4 exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+
+# Chromium
+for_window [class="Chromium"] border none
+assign [class="Chromium" window_role="browser"] 3
+
 # XFCE UTILS
+exec --no-startup-id xfsettingsd --sm-client-disable &
 exec --no-startup-id xfce4-power-manager &
+exec --no-startup-id xfce4-volumed &
+exec --no-startup-id feh --no-fehbg --bg-fill '/usr/share/xfce4/backdrops/moon_venus.jpg' &
+
