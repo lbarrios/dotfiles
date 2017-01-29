@@ -6,6 +6,9 @@ I3LOCK_PID_FILE=~/.i3lock.pid
 i3locked=`pgrep i3lock | wc -l`
 [ "$i3locked" = "0" ] || exit 1
 
+# Don't execute if there is a instance of dont_lock_me_plz running.
+[ `ps aux | grep dont_lock_me_plz | grep -v grep | wc -l` = "0" ] || exit 1
+
 # Take a screenshot
 scrot /tmp/screen_locked.png -z
 
