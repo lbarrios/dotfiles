@@ -153,7 +153,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
-        tray_output primary
+        tray_output LVDS1
 }
 
 # lbarrios
@@ -182,20 +182,24 @@ bindsym --release Control_R+Print exec "scrot ~/Screenshots/Screenshot_%Y-%m-%d_
 
 # Workspaces - no anda :(
 #exec --no-startup-id "icedove"
-
 #exec --no-startup-id "chromium --app=https://i3wm.org/docs/refcard.html"
 #exec --no-startup-id "chromium --app=https://i3wm.org/docs/userguide.html"
 
-
+# Exit message
 bindsym $mod+Shift+F4 exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # Chromium
 for_window [class="Chromium"] border none
 assign [class="Chromium" window_role="browser"] 3
+exec --no-startup-id chromium &
 
 # XFCE UTILS
 exec --no-startup-id xfsettingsd --sm-client-disable &
 exec --no-startup-id xfce4-power-manager &
 exec --no-startup-id xfce4-volumed &
 exec --no-startup-id feh --no-fehbg --bg-fill '/usr/share/xfce4/backdrops/moon_venus.jpg' &
+exec --no-startup-id nm-applet &
 
+# Moving workspace between monitors
+bindsym $mod+Control+Left move workspace to output left
+bindsym $mod+Control+Right move workspace to output left
