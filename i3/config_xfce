@@ -153,7 +153,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
         status_command i3status
-        tray_output LVDS1
+        tray_output LVDS-1
 }
 
 # lbarrios
@@ -198,10 +198,12 @@ exec --no-startup-id xfsettingsd --sm-client-disable &
 exec --no-startup-id xfce4-power-manager &
 exec --no-startup-id xfce4-volumed &
 # exec --no-startup-id feh --no-fehbg --bg-fill '/usr/share/xfce4/backdrops/moon_venus.jpg' &
-exec --no-startup-id feh --no-fehbg --bg-fill '/home/lbarrios/share/images/IMG_1553.JPG' &
-exec --no-startup-id gifview --window root -a '/home/lbarrios/share/images/raining_bedroom.gif' &
+#exec --no-startup-id feh --no-fehbg --bg-fill '/home/lbarrios/share/images/IMG_1553.JPG' &
+exec --no-startup-id feh --no-fehbg --bg-fill '/home/lbarrios/share/images/1492978958005.jpg' &
+#exec --no-startup-id gifview --window root -a '/home/lbarrios/share/images/raining_bedroom.gif' &
 exec --no-startup-id nm-applet &
 # xwinwrap -ov -fs -- gifview -a -w WID +e Wallpaper.gif
+
 
 # Moving workspace between monitors
 bindsym $mod+Control+Left move workspace to output left
