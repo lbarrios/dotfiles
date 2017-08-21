@@ -9,6 +9,7 @@ if [ -f ~/.extend.bashrc ]; then
 	else
 		echo "El archivo ~/.extend.bashrc ya existía, moviendo a ~/.extend.bashrc.original"
 		mv ~/.extend.bashrc ~/.extend.bashrc.original
+		ln -s ${DOTFILES}/extend.bashrc/extend.bashrc ~/.extend.bashrc
 	fi
 else
 	ln -s ${DOTFILES}/extend.bashrc/extend.bashrc ~/.extend.bashrc
@@ -19,6 +20,7 @@ if [ -f ~/.extend.profile ]; then
 	else
 		echo "El archivo ~/.extend.profile ya existía, moviendo a ~/.extend.profile.original"
 		mv ~/.extend.profile ~/.extend.profile.original
+		ln -s ${DOTFILES}/extend.bashrc/extend.profile ~/.extend.profile
 	fi
 else
 	ln -s ${DOTFILES}/extend.bashrc/extend.profile ~/.extend.profile
