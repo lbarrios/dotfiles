@@ -1,0 +1,25 @@
+#!/bin/bash
+# ~/bin/blurlock
+# copied from /usr/bin/blurlock
+
+# Don't execute if there is a instance of dont_lock_me_plz running.
+[ `ps aux | grep dont_lock_me_plz | grep -v grep | wc -l` = "0" ] || exit 1
+
+# Check if i3lock is currently running
+i3locked=$(pgrep i3lock | wc -l)
+# Play sound notification if i3lock is not running
+[ $i3locked = "0" ] && ~/bin/play_sound_notification.sh &
+# Ring speaker bell
+[ $i3locked = "0" ] && ~/bin/ring_terminal_bell.sh &
+
+# take screenshot
+import -window root /tmp/screenshot.png
+
+# blur it
+convert /tmp/screenshot.png -blur 0x5 /tmp/screenshotblur.png
+rm /tmp/screenshot.png
+
+# lock the screen
+i3lock -u -i /tmp/screenshotblur.png -e
+
+exit 0
