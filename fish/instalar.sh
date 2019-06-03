@@ -1,8 +1,5 @@
-### Requerimientos
-* fish shell
-
-### Instalación
-```sh
+#!/bin/bash
+ln -s ${DOTFILES}/fish/config.fish ~/.config/fish/config.fish
 DOTFILES=~/repositorios/dotfiles
 if [ -f ~/.config/fish/config.fish ]; then
         if [ -f ~/.config/fish/config.fish.original ]; then
@@ -15,4 +12,3 @@ if [ -f ~/.config/fish/config.fish ]; then
 else
         ln -s ${DOTFILES}/fish/config.fish ~/.config/fish/config.fish
 fi
-```

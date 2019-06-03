@@ -1,7 +1,4 @@
-### Instalación ARCH
-Suponiendo que la carpeta del repositorio se encuentre en la ruta `~/repositorios/dotfiles`, hacer algo como:
-
-```bash
+#!/bin/bash
 DOTFILES=~/repositorios/dotfiles
 FILE=.extend.Xresources
 if [ -f ~/${FILE} ]; then
@@ -16,5 +13,3 @@ else
     echo "Creando el archivo ~/${FILE}"
 	ln -s ${DOTFILES}/urxvt/extend.Xresources ~/${FILE}
 fi
-```
-
