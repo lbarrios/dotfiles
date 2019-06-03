@@ -1,53 +1,54 @@
-*background:                      #272827
-*foreground:                      #657b83
-*fading:                          15
-*fadeColor:                       black
-*cursorColor:                     #16A085
-*pointerColorBackground:          #2B2C2B
-*pointerColorForeground:          #16A085
+! *background:                      #272827
+! *foreground:                      #657b83
+! *fading:                          15
+! *fadeColor:                       black
+! *cursorColor:                     #16A085
+! *pointerColorBackground:          #2B2C2B
+! *pointerColorForeground:          #16A085
+! 
+! !! black dark/light
+! *color0:                          #232423
+! *color8:                          #282928
+! 
+! !! red dark/light
+! *color1:                          #BA2922
+! *color9:                          #CC372C
+! 
+! !! green dark/light
+! *color2:                          #7E807E
+! *color10:                         #8D8F8D
+! 
+! !! yellow dark/light
+! *color3:                          #4C4F4D
+! *color11:                         #4E524F
+! 
+! !! blue dark/light
+! *color4:                          #16A085
+! *color12:                         #13BF9D
+! 
+! !! magenta dark/light
+! *color5:                          #43746A
+! *color13:                         #487D72
+! 
+! !! cyan dark/light
+! *color6:                          #00CCCC
+! *color14:                         #00D1D1
+! 
+! !! white dark/light
+! *color7:                          #E0E0E0
+! *color15:                         #E8E8E8
+! 
+! Xcursor.theme: Maia-Cursor
+! Xcursor.size:                     0
+! 
+! XTerm*background:                 #272827
+! XTerm*foreground:                 #fdf6e3
+! XTerm*reverseVideo:               on
+! XTerm*faceName:                   Terminus:size=11:antialias=true
+! XTerm*selectToClipboard:          true
 
-!! black dark/light
-*color0:                          #232423
-*color8:                          #282928
-
-!! red dark/light
-*color1:                          #BA2922
-*color9:                          #CC372C
-
-!! green dark/light
-*color2:                          #7E807E
-*color10:                         #8D8F8D
-
-!! yellow dark/light
-*color3:                          #4C4F4D
-*color11:                         #4E524F
-
-!! blue dark/light
-*color4:                          #16A085
-*color12:                         #13BF9D
-
-!! magenta dark/light
-*color5:                          #43746A
-*color13:                         #487D72
-
-!! cyan dark/light
-*color6:                          #00CCCC
-*color14:                         #00D1D1
-
-!! white dark/light
-*color7:                          #E0E0E0
-*color15:                         #E8E8E8
-
-Xcursor.theme: Maia-Cursor
-Xcursor.size:                     0
-
-XTerm*background:                 #272827
-XTerm*foreground:                 #fdf6e3
-XTerm*reverseVideo:               on
-XTerm*faceName:                   Terminus:size=11:antialias=true
-XTerm*selectToClipboard:          true
-
-URxvt.font:                       9x15
+!URxvt.font:                       9x15
+URxvt.font:                       xft:Droid Sans Mono:size=9:antialias=true
 
 ! alternative font settings with 'terminus':
 !URxvt.font:      -xos4-terminus-medium-r-normal--16-160-72-72-c-80-iso10646-1
@@ -55,12 +56,12 @@ URxvt.font:                       9x15
 !! terminus names see end of file!
 
 URxvt.depth:                      32
-URxvt.background:                 [80]#000000
+! URxvt.background:                 [80]#000000
 URxvt*scrollBar:                  false
 URxvt*mouseWheelScrollPage:       false
 URxvt*cursorBlink:                true
-URxvt*background:                 black
-URxvt*foreground:                 grey
+! URxvt*background:                 black
+! URxvt*foreground:                 grey
 URxvt*saveLines:                  5000
 
 ! for 'fake' transparency (without Compton) uncomment the following three lines
@@ -214,10 +215,23 @@ URxvt*saveLines:                  5000
 ! -xos4-terminus-bold-r-normal--28-280-72-72-c-140-iso10646-1
 ! -xos4-terminus-bold-r-normal--32-320-72-72-c-160-iso10646-1
 
-! https://wiki.archlinux.org/index.php/Rxvt-unicode
+!!!!!!!!!!!!!!!!!!!!!
 ! lbarrios
-URxvt.perl-ext-common: tabbed
+!!!!!!!!!!!!!!!!!!!!!
+! URxvt.perl-lib: ~/.urxvt/ext
+URxvt.perl-ext-common: default,tabbed,font-size
+
+! https://wiki.archlinux.org/index.php/Rxvt-unicode
+! tabbed: for tabs (native)
 URxvt.tabbed.tabbar-fg: 2
 URxvt.tabbed.tabbar-bg: 0
 URxvt.tabbed.tab-fg: 3
 URxvt.tabbed.tab-bg: 0
+
+! Enable scroll with shift+pgup/pgdown
+Urxvt.secondaryScroll: true
+
+! font-size: https://github.com/majutsushi/urxvt-font-size
+URxvt.keysym.C-Up:     font-size:increase
+URxvt.keysym.C-Down:   font-size:decrease
+URxvt.keysym.C-0:      font-size:reset
