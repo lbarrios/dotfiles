@@ -285,8 +285,8 @@ exec --no-startup-id clipit
 # exec_always --no-startup-id sbxkb
 exec --no-startup-id start_conky_maia
 # exec --no-startup-id start_conky_green
-#exec --no-startup-id xautolock -time 10 -locker blurlock
-exec --no-startup-id xautolock -notify 10 -time 1 -locker "~/bin/blurlock" -notifier "~/bin/notify_locking_screen.sh"
+exec --no-startup-id xautolock -time 10 -locker blurlock
+#exec --no-startup-id xautolock -notify 10 -time 1 -locker "~/bin/blurlock" 
 exec_always --no-startup-id ff-theme-util
 exec_always --no-startup-id fix_xcursor
 
@@ -354,9 +354,8 @@ bar {
     position bottom
 
 ## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
-#	tray_output primary
-#	tray_output eDP1
-	tray_output LVDS1
+#   tray_output primary
+#   tray_output eDP1
 
     bindsym button4 nop
     bindsym button5 nop

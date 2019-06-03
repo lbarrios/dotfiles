@@ -18,3 +18,5 @@ else
 fi
 ```
 
+### Instalación de ext
+Instalar en ~/.urxvt/
