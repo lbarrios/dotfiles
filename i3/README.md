@@ -14,4 +14,5 @@ Está todo re cabeza por ahora. Parece que hay que dedicarle tiempo a esto..
 mkdir -p ~/.i3/
 ln -s ${DOTFILES}/dotfiles/i3/config ~/.i3/config
 sudo ln -s ${DOTFILES}/dotfiles/i3/config/i3status-wrapper.py /usr/local/sbin
+ln -s ${DOTFILES}/dotfiles/i3/i3-scrot.conf ~/.config/
 ```
